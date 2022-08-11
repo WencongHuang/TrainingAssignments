@@ -1,0 +1,44 @@
+<!-- 
+  Date Modified: 7/12/2022
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sections" id="section1">
+    <div class="loadingBackground">
+      <div class="loadingText">0%</div>
+      <div class="loadingBar"></div>
+    </div>
+    <div class="buttons">
+      <button class="reloadBtn">Reload</button>
+      <button class="resetBtn">Reset</button>
+      <button class="pauseBtn">Pause</button>
+    </div>
+    <a href="#section2" class="nextSection">Next Section</a>
+    <div class="arrowDown"></div>
+  </div>
+
+  <div class="sections" id="section2">
+    <a href="#section1" class="previousSection">Previous Section</a>
+    <div class="arrowUp"></div>
+    <div class="searchBoxContainer">
+      <input class="searchBoxInput" type="text" placeholder="Where are you from?">
+      <ul class="suggestionList">
+        <!-- New suggestions goes to here upon user type in letters -->
+      </ul>
+    </div>
+  </div>
+
+  <footer>&copy; Edmond W. Huang 2022</footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+/* Navigation Bar */
+nav {
+  background-color: rgb(100, 100, 100);
+}
+
+nav button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.25rem;
+  border: none;
+  background-color: rgb(100, 100, 100);
+  color: white;
+}
+
+nav button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+nav button:active {
+  background-color: white;
+  color: black;
+}
+
+#homeBtn {
+  background-color: green !important;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Yosemite Article */
+article {
+  margin: 0.75rem auto;
+  width: 75%;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+article img {
+  width: 40%;
+  height: auto;
+  margin: 5px 15px 5px 5px;
+}
+
+.intro h3{
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  width: 75%;
+}
+/* Forms */
+.wrapper {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.formsContainer {
+  background-color: rgb(222, 222, 222);
+  border: 1px solid gray;
+  display: inline-block;
+  width: 70%;
+  padding: 10px;
+}
+
+.row1 {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.formsContainer label, .formsContainer input {
+  display: block;
+}
+
+.billingAddressForm h3, .paymentForm h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.billingAddressForm label, .paymentForm label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.billingAddressForm input, .paymentForm input {
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  border-radius: 2px;
+  width: 70%;
+  padding: 5px;
+}
+
+.paymentForm i {
+  padding: 6px 2px;
+}
+
+.state, .zip, .expYear, .CVV {
+  display: inline-block;
+  width: 40.5%;
+}
+
+.row2 #shipSameBill, .row2 label {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#submitBtn {
+  width: 100%;
+  background-color: gray;
+  border: white;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#submitBtn:hover {
+  background-color: black;
+}
+
+#submitBtn:active {
+  background-color: white;
+  color: black;
+}
+
+/* Cart */
+.cart {
+  background-color: rgb(222, 222, 222);
+  border: 1px solid gray;
+  display: inline-block;
+  width: 20%;
+  padding: 10px;
+}
+
+.cart h3, .cart li {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+}
+
+.cart .item {
+  color: rgb(0, 200, 230);
+}
+
+.cart hr {
+  margin: 15px 0;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  border: none;
+}
+
+footer {
+  display: none;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  padding-top: 20px;
+  font-size: xx-small;
+}

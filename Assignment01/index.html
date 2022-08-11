@@ -1,0 +1,97 @@
+<!-- 
+  Date Modified: 7/07/2022
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+</head>
+<body>
+  <nav>
+    <button id="homeBtn">Home</button>
+    <button>Search</button>
+    <button>Contact</button>
+    <button>Login</button>
+  </nav>
+  <main>
+    <article>
+      <img src="https://images.pexels.com/photos/5232953/pexels-photo-5232953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image of Yosemite">
+      <div class="intro">
+        <h3>Yosemite</h3>
+        <p>Not just a great valley, but a shrine to human foresight, the strength of granite, the power of glaciers, the persistence of life, and the tranquility of the High Sierra. First protected in 1864, Yosemite National Park is best known for its waterfall, but within its nearly 1,200 square miles, you can find deep valleys, grand meadows, ancient giant sequoias, a vast wilderness area, and much more.</p>
+      </div>
+    </article>
+    <div class="wrapper">
+      <div class="formsContainer">
+        <div class="row1">
+          <div class="billingAddressForm column">
+            <h3>Billing Address</h3>
+            <form action="">
+              <label for="fullName"><i class="fa-solid fa-user"></i> Full Name</label>
+              <input type="text" id="fullName" placeholder="John M. Doe">
+              <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+              <input type="email" id="email" placeholder="john@example.com">
+              <label for="address"><i class="fa-solid fa-address-card"></i> Address</label>
+              <input type="text" id="address" placeholder="830 Hillview">
+              <label for="city"><i class="fa-solid fa-city"></i> City</label>
+              <input type="text" id="city" placeholder="Milpitas">
+              <div class="state">
+                <label for="state">State</label>
+                <input type="text" id="state" placeholder="CA">
+              </div>
+              <div class="zip">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" placeholder="95035">
+              </div>
+            </form>
+          </div>
+          <div class="paymentForm column">
+            <h3>Payment</h3>
+            <form action="">
+              <label for="">Accepted Card</label>
+              <i class="fa-solid fa-credit-card"></i>
+              <i class="fa-solid fa-wallet"></i>
+              <i class="fa-solid fa-money-check-alt"></i>
+              <label for="nameOnCard">Name On Card</label>
+              <input type="text" id="nameOnCard" placeholder="John More Doe">
+              <label for="ccNumber">Credit Card Number</label>
+              <input type="text" id="ccNumber" placeholder="1111-1111-1111-1111">
+              <label for="expMonth">Exp Month</label>
+              <input type="text" id="expMonth" placeholder="September">
+              <div class="expYear">
+                <label for="expYear">Exp Year</label>
+                <input type="text" id="expYear" placeholder="2018">
+              </div>
+              <div class="CVV">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="111">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row2">
+          <input type="checkbox" id="shipSameBill">
+          <label for="shipSameBill">Shipping address same as billing</label>
+          <input type="submit" value="Submit" id="submitBtn">
+        </div>
+      </div>
+      <div class="cart">
+        <h3><span>Cart</span><span><i class="fa-solid fa-shopping-cart"></i> 4</span></h3>
+        <li><span class="item">Item1</span><span>$15</span></li>
+        <li><span class="item">Item2</span><span>$5</span></li>
+        <li><span class="item">Item3</span><span>$8</span></li>
+        <li><span class="item">Item4</span><span>$2</span></li>
+        <hr>
+        <li><span>Total</span><span>$30</span></li>
+      </div>
+    </div>
+  </main>
+  <footer>&copy; Edmond W. Huang 2022</footer>
+  <script src="app.js"></script>
+</body>
+</html>

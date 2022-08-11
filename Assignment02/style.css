@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.sections {
+  position: relative;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: center;
+}
+
+.nextSection,
+.previousSection {
+  visibility: hidden;
+  position: absolute;
+}
+
+.arrowDown::after{
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin: auto;
+  top: 40rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-right: 4px solid lightgray;
+  border-bottom: 4px solid lightgray;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.arrowUp::after{
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 40rem;
+  left: 0;
+  border-right: 4px solid lightgray;
+  border-bottom: 4px solid lightgray;
+  transform: rotate(-135deg);
+  cursor: pointer;
+}
+/* Start of Section 1 */
+/* Loading Bar */
+.loadingBackground {
+  position: relative;
+  background-color: lightgray;
+  width: 75%;
+  text-align: center;
+  border-radius: 10px;
+  z-index: -2;
+}
+
+.loadingBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: #1D976C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  border-radius: 10px;
+  width: 0%; /* need to make to change from 0 to 100 */
+  height: 100%;
+  z-index: -1;
+}
+
+.loadingText {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+/* Buttons */
+.buttons {
+  margin-top: 7px;
+}
+
+.reloadBtn,
+.resetBtn,
+.pauseBtn {
+  font-size: 0.75rem;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: lightgray;
+  font-weight: bold;
+}
+
+.reloadBtn:hover,
+.resetBtn:hover,
+.pauseBtn:hover:enabled {
+  background-color: black;
+  color: white;
+}
+
+.reloadBtn:active,
+.resetBtn:active,
+.pauseBtn:active:enabled {
+  background-color: white;
+  color: black;
+}
+
+.reloadBtn {
+  margin-right: 3px;
+}
+
+.resetBtn {
+  margin: 0 3px;
+}
+
+.pauseBtn {
+  margin-left: 3px;
+}
+/* Start of Section 2 */
+.searchBoxContainer {
+  position: relative;
+  min-width: 30rem;
+}
+
+.searchBoxInput {
+  position: absolute;
+  top: -2.75rem;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(66,66,66,.75);
+}
+
+.searchBoxInput:focus {
+  outline:none;
+}
+
+.suggestionList {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  list-style-type: none;
+  font-size: 1.25rem;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.suggestionList li {
+  width: 100%;
+  color: #000000;
+  padding: 5px 0px;
+  font-size: 1.25rem;
+  border-bottom: #000000 1px solid;
+  cursor: pointer;
+}
+
+.suggestionList li:hover {
+  background-color: lightgray;
+  font-weight: bold;
+}
+
+.suggestionList li:last-child {
+  border-bottom: none;
+}
+
+footer {
+  display: none;
+}
