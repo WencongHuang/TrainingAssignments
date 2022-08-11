@@ -1,0 +1,44 @@
+.pageContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  color: gray;
+  margin-top: -0.75rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+p {
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+a {
+  margin: 5px;
+  font-size: 1.5rem;
+  width: 25%;
+}
+
+a:link, a:visited {
+  border: 2px solid #04AA6D;
+  border-radius: 10px;
+  color: gray;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  background-color: #04AA6D;
+  color: white;
+}
