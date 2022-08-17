@@ -163,9 +163,9 @@ console.log("reduce:", reduce_array.reduce(reducer));
 console.log("reduce:", reduce_array.reduce(reducer, 10));
 
 // ==== Native Bind ====
-Function.prototype.bind = function(refObj, ...args) {
+Function.prototype.bind = function(refObj, ...args1) {
   const fn = this;
-  return () => { fn.call(refObj, args) };
+  return (...args2) => { return fn.apply(refObj, [...args1, ...args2]); };
 };
 
 // test case 1
