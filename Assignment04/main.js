@@ -6,26 +6,7 @@
  * the order of output array doesn't matter
  */
 function dfsFlatten(arr) {
-  // DFS uses stack
-  let stack = [...arr];
-  let result = [];
-  while(stack.length) {
-    // start from the back and check if the element is an array
-    const next = stack.pop();
-    // if the element is an array, push everything of that element in the stack
-    if(Array.isArray(next)) {
-      stack.push(...next);
-    // otherwise, it is just a simple element, push it in the result
-    } else {
-      result.push(next);
-    }
-  }
-  // the result is in a reverse order, reverse it to get the correct order
-  return result.reverse();
-}
-
-function bfsFlatten(arr) {
-  // BFS uses queue, but I didn't use a queue.
+  // DFS uses stack, but I didn't use a stack.
   let result = [];
   arr.forEach((item) => {
     if(Array.isArray(item)) {
@@ -34,6 +15,24 @@ function bfsFlatten(arr) {
       result.push(item);
     }
   });
+  return result;
+}
+
+function bfsFlatten(arr) {
+  // BFS uses queue
+  let queue = [...arr];
+  let result = [];
+  while(queue.length) {
+    // start from the beginning and check if the element is an array
+    const next = queue.shift();
+    // if the element is an array, push everything of that element in the queue
+    if(Array.isArray(next)) {
+      queue.push(...next);
+    // otherwise, it is just a simple element, push it in the result
+    } else {
+      result.push(next);
+    }
+  }
   return result;
 }
 
