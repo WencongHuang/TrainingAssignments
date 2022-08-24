@@ -6,25 +6,100 @@
     External - create a css file and link it to the html file
 
 2. What is css specificity? Place explain it in the desc order?
-  A way to select the element and add style to the element. If one way that has a higher specificity, then that style will overwrite the lower one.
+  A way to select the element and add style to the element. If one that has a higher specificity, then that style will overwrite the lower one.
+
+  Highest Specificity
+    !important                                                                              MAX
+    Inline styling                              <h1 style="color: red">                     1000
+    ID (#)                                      #selectorElement                            100
+    Classes, pseudo class, attribute selector   .sel, sel:hover, sel[attribute]             10
+    Element, pseudo element.                    p, p::before                                1
+    *                                                                                       0
+  Lowest Specificity
 
 3. What is pseudo element and pseudo class?
-  ::
-  :
+  Pseudo element (::) used to style a specified parts of the element.
+  Pseudo class (:) used to define a special state of the element.
   
 4. Write code snippets to make element center horizontally, vertically and both?
 
+  Center Horizontally Only:
+    For simple inline element
+    selector {
+      text-align: center;
+    }
+
+    For simple block element
+    selector {
+      margin: 0 auto;
+    }
+
+    In general, use position and make sure the parent of the element is relative/absolute
+    selector {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+  Center Vertically Only:
+    In general, use position and make sure the parent of the element is relative/absolute
+    selector {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+
+  Center Both Horizontally and Vertically:
+    Using position, make sure the parent of the element is either relative or absolute
+    selector {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    Using flexbox, make sure the element has a height and a width
+    selector {
+      height: 100px;
+      width: 100px;
+
+      display: flex;
+      flex-direction: column;   This line is not necessary
+      justify-content: center;   This will make horizontally center 
+      align-items: center;   This will make vertically center 
+    }
+
+    Using grid
+    selector {
+      display: grid;
+      place-items: center;  The line is the combination of the two lines below
+
+      justify-content: center;   This will make horizontally center 
+      align-items: center;   This will make vertically center 
+    }
 
 5. What is margin collapse?
+  When two elements share the same size of "space" or area.
+  Let's say we have element A with margin-bottom: 100px; and element B with margin-top: 100px; In this case, the margin collapses because the margin between the two elements will be 100px instead of 200px.
+  Unlike padding, padding will makes the "space" between the two elements 200px because padding is within the element.
+
+6. What’s css box-sizing attributes?
+  Allow the padding and border of the element to become part of the total width/height of the element.
+
+7. Css to hide HTML elements and their differences?
+  display: none;
+    This method will make the element completely disappear in the browser.
+
+  vs
+
+  visibility: 0;
+    This method will make the content in the element disappear, but its "space" remain in the browser.
 
 
-7. What’s css box-sizing attributes?
-
-
-8. Css to hide HTML elements and their differences?
-
-
-9. What is css image sprites?
-
+8. What is css image sprites?
+  A collection of images put into a single image.
+  Using image sprites can reduce the number of server requests and save some bandwidth.
+  No loading delay because it is just a single image.
 
 */
