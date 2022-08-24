@@ -1,0 +1,30 @@
+/* 
+1. How many ways you can embed css code into html file?
+  Three ways:
+    Inline - add style within the tag
+    Internal - add styles inside the <script> tag in the same html file
+    External - create a css file and link it to the html file
+
+2. What is css specificity? Place explain it in the desc order?
+  A way to select the element and add style to the element. If one way that has a higher specificity, then that style will overwrite the lower one.
+
+3. What is pseudo element and pseudo class?
+  ::
+  :
+  
+4. Write code snippets to make element center horizontally, vertically and both?
+
+
+5. What is margin collapse?
+
+
+7. What’s css box-sizing attributes?
+
+
+8. Css to hide HTML elements and their differences?
+
+
+9. What is css image sprites?
+
+
+*/
