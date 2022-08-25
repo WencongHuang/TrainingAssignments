@@ -15,3 +15,6 @@ https://wenconghuang.github.io/TrainingAssignments/Assignment03/index.html
 
 #### Assignment 04
 https://wenconghuang.github.io/TrainingAssignments/Assignment04/index.html
+
+#### Assignment 05
+https://wenconghuang.github.io/TrainingAssignments/Assignment05/index.html
