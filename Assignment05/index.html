@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assignment 05</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- 
@@ -26,5 +27,29 @@
       Block element will start at a newline no matter what and can set its height and width.
       Inline element will start at the same line. It only takes as much space as it needs.
   -->
+  <div class="container">
+    <h2>The Rectangle</h2>
+    <div class="rectangles" id="div1">
+      Div1
+      <div class="rectangles" id="div2">
+        Div2
+        <div class="rectangles" id="div3">
+          Div3
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button>Bubbling</button>
+      <button>Capturing</button>
+      <button>Extra</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>

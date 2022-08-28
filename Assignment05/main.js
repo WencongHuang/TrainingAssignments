@@ -198,3 +198,78 @@ function printTasks(list) {
 }
 
 printTasks(list);
+
+
+
+const buttonArray = document.querySelectorAll("button");
+const divArray = document.querySelectorAll(".rectangles");
+// use to store references to every eventListener.
+let handlers = [];
+
+function removeListener() {
+  for(let i = 0; i < divArray.length; ++i) {
+    divArray[i].removeEventListener('click', handlers[i]);        // For remove Bubbling
+    divArray[i].removeEventListener('click', handlers[i], true);  // For remove Capturing
+  }
+  handlers = [];
+}
+
+// Get all children and grandchildren of an element recursively.
+function getAllChildren(htmlElement) {
+  // Check if we are at the deepest element; if there is no child, we just return the element.
+  if (htmlElement.children.length === 0) {
+    return [htmlElement];
+  } 
+  let allChildElements = [];
+  
+  for (let i = 0; i < htmlElement.children.length; ++i) {
+    // Push incoming children from deeper level of recursive call.
+    let children = getAllChildren(htmlElement.children[i]);
+    if (children) {
+      // Note: we can do push or unshift.
+      // But, we want to use unshift in this case since we want to see the element that is on the very top first.
+      allChildElements.unshift(...children);
+    }
+  }
+  // Don't forget to push/unshift the element itself.
+  allChildElements.unshift(htmlElement);
+
+  return allChildElements;
+};
+
+// This function is use for the extra part.
+function extra(event) {
+  event.stopPropagation();
+  // event.target is the element when user clicked on.
+  // getAllChildren() will return an array, so we can just use the build-in method, Array.forEach().
+  getAllChildren(event.target).forEach(element => {
+    alert(element.id);
+  });
+}
+
+function changeMode(mode) {
+  for(let i = 0; i < divArray.length; ++i) {
+    // Since every time we run addEventListener, it will run as a "new function" (different references) that have the same name.
+    // Therefore, we need to store all the references so that we can remove it later when user want to switch to different mode.
+
+    // Check if user want to see the extra part. If yes, bind it to the extra function; if not, just bind it with alert.
+    let wrapper = mode.toUpperCase() === "EXTRA" ? extra.bind(this) : alert.bind(this, divArray[i].id);
+    handlers.push(wrapper);
+
+    if(mode.toUpperCase() === "BUBBLING") {
+      divArray[i].addEventListener('click', wrapper);
+    } else if (mode.toUpperCase() === "CAPTURING") {
+      divArray[i].addEventListener('click', wrapper, true);
+    } else if(mode.toUpperCase() === "EXTRA") {
+      divArray[i].addEventListener('click', wrapper);
+    }
+  }
+}
+
+// Create three buttons that can switch between Bubbling, Capturing, and Extra part.
+for(let i = 0; i < buttonArray.length; i++) {
+  buttonArray[i].addEventListener('click', function() {
+    removeListener();
+    changeMode(buttonArray[i].innerHTML);
+  });
+}

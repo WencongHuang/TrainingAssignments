@@ -103,3 +103,64 @@
   No loading delay because it is just a single image.
 
 */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangles {
+  width: 35%;
+  height: 50%;
+  border: 3px solid black;
+
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#div2, #div3 {
+  margin: auto 0;
+}
+
+.buttons {
+  display: inline-block;
+}
+
+button {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  border: none;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
