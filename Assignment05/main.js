@@ -200,7 +200,7 @@ function printTasks(list) {
 printTasks(list);
 
 
-
+//===============The Rectangle===============
 const buttonArray = document.querySelectorAll("button");
 const divArray = document.querySelectorAll(".rectangles");
 // use to store references to every eventListener.

@@ -164,3 +164,24 @@ button:hover {
   background: #3cb0fd;
   text-decoration: none;
 }
+
+.qanda {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  justify-items: stretch;
+  /* justify-content: stretch; */
+}
+
+.sections {
+  border: 1px solid;
+  padding: 5%;
+}
+
+.sections ol li {
+  padding: 5px;
+}
+
+.sections ol li::marker {
+  font-weight: bold;
+}

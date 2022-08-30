@@ -46,8 +46,394 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container qanda">
+    <div class="sections qandaHTML">
+      <h4>HTML Q&A</h4>
+      <ol>
+        <li>
+          <p>What is the !DOCTYPE we place at the top of html file? Why we need it?</p>
+          <p>
+            <code>!DOCTYPE</code> is a way to tell the browser or the computer that this file is a html document.
+          </p>
+        </li>
+        <li>
+          <p>List some semantic tags in html5</p>
+          <p>
+            <code>&lt;header&gt;&lt;/header&gt;</code>
+            <br>
+            <code>&lt;main&gt;&lt;/main&gt;</code>
+            <br>
+            <code>&lt;footer&gt;&lt;/footer&gt;</code>
+            <br>
+            <code>&lt;nav&gt;&lt;/nav&gt;</code>
+            <br>
+            <code>&lt;article&gt;&lt;/article&gt;</code>
+          </p>
+        </li>
+        <li>
+          <p>Write a code snippet to achieve the requirements set up a link for user, user can click the link and redirect user to the YouTube in the separate tab.</p>
+          <p>
+            <code>&lt;a href="https://www.youtube.com/" target="_blank"&gt;Click For Youtube!&lt;/a&gt;</code>
+          </p>
+        </li>
+        <li>
+          <p>What is difference between block element and inline element? </p>
+          <p>
+            <strong>Block</strong> element will start at a newline no matter what and can set its height and width.
+            <br>
+            <strong>Inline</strong> element will start at the same line. It only takes as much space as it needs.
+          </p>
+        </li>
+      </ol>
+    </div>
+    <div class="sections qandaCSS">
+      <h4>CSS Q&A</h4>
+      <ol>
+        <li>
+          <p>How many ways you can embed css code into html file?</p>
+          <p>
+            Three ways:
+            <br>
+            Inline - add style within the tag.
+            <br>
+            Internal - add styles inside the <code>&lt;script&gt;</code> tag in the same html file.
+            <br>
+            External - create a css file and <code>&lt;link&gt;</code> it to the html file.
+          </p>
+        </li>
+        <li>
+          <p>What is css specificity? Place explain it in the desc order?</p>
+          <p>
+            A way to select the element and add style to the element. If one that has a higher specificity, then that style will overwrite the lower one.
+            <br>
+            Highest Specificity
+            <br>
+            !important                                                                   MAX
+            <br>
+            Inline styling                   &lt;h1 style="color: red"&gt;               1000
+            <br>
+            ID (#)                           #selectorElement                            100
+            <br>
+            Classes, pseudo class, attribute selector   .sel, sel:hover, sel[attribute]  10
+            <br>
+            Element, pseudo element.                    p p::before                      1
+            <br>
+            *                                                                            0
+            <br>
+            Lowest Specificity
+          </p>
+        </li>
+        <li>
+          <p>What is pseudo element and pseudo class?</p>
+          <p>
+            Pseudo element (::) used to style a specified parts of the element.
+            <br>
+            Pseudo class (:) used to define a special state of the element.
+          </p>
+        </li>
+        <li>
+          <p>Write code snippets to make element center horizontally, vertically and both?</p>
 
+        </li>
+        <li>
+          <p>What is margin collapse?</p>
+          <p>
+            When two elements share the same size of "space" or area.
+            <br>
+            Let's say we have element A with margin-bottom: 100px; and element B with margin-top: 100px; In this case, the margin collapses because the margin between the two elements will be 100px instead of 200px.
+            <br>
+            Unlike padding, padding will makes the "space" between the two elements 200px because padding is within the element.
+          </p>
+        </li>
+        <li>
+          <p>What is css box-sizing attributes?</p>
+          <p>
+            Allow the padding and border of the element to become part of the total width/height of the element.
+          </p>
+        </li>
+        <li>
+          <p>CSS to hide HTML elements and their differences?</p>
+          <p>
+            <code>display: none;</code>
+            <br>
+            This method will make the element completely disappear in the browser.
+            <br>
+            <code>visibility: 0;</code>
+            <br>
+            This method will make the content in the element disappear, but its "space" remain in the browser.
+          </p>
+        </li>
+        <li>
+          <p>What is css image sprites?</p>
+          <p>
+            A collection of images put into a single image.
+            <br>
+            Using image sprites can reduce the number of server requests and save some bandwidth.
+            <br>
+            No loading delay because it is just a single image.
+          </p>
+        </li>
+      </ol>
+    </div>
+    <div class="sections qandaJS">
+      <h4>JavaScript Q&A</h4>
+      <ol>
+        <li>
+          <p>Please explain JS mechanism (sync and async code and event loop)</p>
+          <p>
+            Usually, when we write a program, the program is synchronous. Meaning the instruction of the program will be executed from top to bottom.
+            <br>
+            However, asynchronous programming gives us the idea of we executed the instruction now, but those instructions will be finished later.
+            <br>
+            Event loop is just a endless loop, where it will wait for tasks/instructions, execute those tasks, then go back and wait for more tasks.
+          </p>
+        </li>
+        <li>
+          <p>What is the difference between function declaration and function expression?</p>
+          <p>
+            function declaration:
+            <br>
+            <code>function aFunction() {}</code>
+            <br>
+            <br>
+            function expression:
+            <br>
+            <code>let bFunction = function() {};</code>
+            <br>
+            OR using arrow function
+            <br>
+            <code>let bFunction = () => {};</code>
+            <br>
+            <br>
+            Obviously, the syntax is different.
+            But the main difference is that function declaration gets hoist to the top when we run the .js file, whereas function expression doesn't get hoist to the top.
+            <br>
+            Therefore, we will get errors if we try to use a function expression before we express it.
+            <br>
+            Also, function declaration allows us to do IIFE (Immediately-Invoked Function Expression), meaning calling/using the function right away. It is a one time usage function and won't get store into memory.
+          </p>
+        </li>
+        <li>
+          <p>Let vs const vs var?</p>
+          <p>
+            var allows variable to re-declare.
+            <br>
+            <code>
+              var again = 0;
+              <br>
+              var again = 1; // 0 is replaced by 1
+            </code>
+            <br>
+            var allows us to access it before declaration.
+            <br>
+            <code>
+              console.log(hi); // undefined
+              <br>
+              var hi = "Hello";
+            </code>
+            <br>
+            var will be scoped to the function scope and hoisted to the top of the scope. (Almost the same idea as...)
+            <br>
+            <code>
+              var hi;
+              <br>
+              console.log(hi); // hoisting is the reason why hi is undefined.
+              <br>
+              var hi = "Hello";
+            </code>
+            <br>
+            <br>
+            let and const are NOT allow variable to re-declare.
+            <br>
+            <code>
+              let again = 0;
+              <br>
+              let again = 1; // SyntaxError
+            </code>
+            <br>
+            let and const are NOT allow us to access it before declaration.
+            <br>
+            <code>
+              console.log(hi); // ReferenceError
+              <br>
+              let hi = "Hello";
+            </code>
+            <br>
+            let and const both scope to the block scope {} and will NOT be hoisted to the top of the scope.
+            <br>
+            <br>
+            let allows re-assignment and const does NOT allow re-assignment.
+            <br>
+            <code>
+              let number1 = 0;
+              <br>
+              number1 = 1; // Ok
+              <br>
+              <br>
+              const number2 = 0;
+              <br>
+              number2 = 1; // Error, can't re-assign a constant.
+            </code>
+          </p>
+        </li>
+        <li>
+          <p>List ES6 features you know</p>
+          <p>
+            <code>let/const vs var</code>
+            <br>
+            Arrow function
+            <br>
+            String literal
+            <br>
+            Destructuring
+            <br>
+            Spreading syntax
+            <br>
+            Default and Rest parameter syntax
+            <br>
+            Promise
+            <br>
+            Class
+          </p>
+        </li>
+        <li>
+          <p>Function prototype methods, bind vs apply cs call?</p>
+          <p>
+            <code>apply()</code> and <code>call()</code> both trigger the function immediately.
+            <br>
+            However,
+            <br>
+              <code>call()</code> takes individual parameters.
+              <br>
+              <code>apply()</code> takes an array of parameters.
+              <br>
+            Syntax:
+            <br>
+              <code>thisArg</code> = "The value to use as this when calling function"
+              <br>
+              <code>
+                call(thisArg, arg1, ... , argN)
+                <br>
+                apply(thisArg, [arg1, ... , argN])
+              </code>
+            <br>
+            <code>bind()</code> will trigger the function later and NOT immediately. AND it will return a new function!
+            <br>
+              Syntax:
+              <br>
+                <code>bind(thisArg, arg1, ... , argN)</code>
+          </p>
+        </li>
+        <li>
+          <p>How to deep copy object in JS?</p>
+          <p>
+            Use <code>JSON.stringify()</code> and <code>JSON.parse()</code>
+            <br>
+            <code>
+              let obj = {};
+              <br>
+              let objDeepCopy = JSON.parse(JSON.stringify(obj));
+            </code>
+            <br>
+            <br>
+            Use <code>lodash -> cloneDeep()</code>
+            <br>
+            <code>
+              import "cloneDeep" from "lodash";
+              <br>
+              ...Later in the project...
+              <br>
+              let obj = {};
+              <br>
+              let objDeepCopy = cloneDeep(obj);
+            </code>
+            <br>
+            <br>
+            Or, create your own method!
+          </p>
+        </li>
+        <li>
+          <p>Event bubbling vs Event Capturing ? What is Event Delegation?</p>
+          <p>
+            Event bubbling is when a event is triggered, the order will start from the event target itself first, then go up to its parent, then its grandparent until their very first ancestor. Go through all the way to the DOM tree.
+            <br>
+            Event capturing is the opposite of event bubbling. When a event is triggered, it will start from the top of the DOM tree, and all the way down to the event's grandparent, then to its parent, and finally to the event itself.
+            <br>
+            Event delegation is a technique. When we have a lot of elements that handle in a similar way and instead of give every element a handler, we can just give a single handler to their common ancestor.
+          </p>
+        </li>
+        <li>
+          <p>What is Closure in JS?</p>
+          <p>
+            A closure is an inner function returned by outer function that still has access to it's outer scope variables.
+          </p>
+        </li>
+        <li>
+          <p>
+            What is the console output for the below code?
+            <br>
+            Write the output in order and error type if there are any errors.
+            <code>
+              function createIncrement() {<br>
+                let value = 0;<br>
+                function increment() { <br>
+                  ++value;<br>
+                  console.log(value);<br>
+                } <br>
+                const msg1= `msg1: ${value}`; <br>
+                function log() {<br>
+                  const msg2 = `msg2: ${value}`;<br>
+                  console.log(msg1);<br>
+                  console.log(msg2);<br>
+                } <br>
+                return [increment, log];<br>
+              }  <br>
+              const [increment, log] = createIncrement(); <br>
+              increment(); // 1 <br>
+              increment(); // 2 <br>
+              log();       // msg1: 0  msg2: 2
+            </code>
+          </p>
+          <br>
+          <p>
+            This assignment is about closure, where an inner function gets returned by the outer function and still have access to the outer function scope.
+            In this case, <code>value, increment, msg1, and log</code> are in the same scope.
+            <br>
+            When increment gets call, variable value will increase by 1 and gets prints out.
+            So for the first call, we will get "1" in the console. And the second, we will get "2" in the console.
+            <br>
+            <code>msg1</code> is a constant and the value is passed into <code>msg1</code> during its assignment, so it will be <code>"msg1: 0"</code>. <code>msg2</code> on the other hand is inside the <code>log</code> function, and the value will gets update when <code>log</code>l is called, so we will get <code>"msg2: 2"</code>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Given an array and print output data at schedule
+            <br>
+            <code>
+              let list = [ <br>
+                { <br>
+                  value: 'a', <br>
+                  delay: 2000 <br>
+                }, <br>
+                { <br>
+                  value: 'b', <br>
+                  delay: 1000 <br>
+                }, <br>
+                { <br>
+                  value: 'c', <br>
+                  delay: 3000 <br>
+                }, <br>
+                ... <br>
+              ];
+            </code>
+            <br>
+            We need to output ‘a’ after 2 seconds, output ‘b’ 1 second after ‘a’, and output ‘c’ 3 seconds after ‘b’
+          </p>
+          <br>
+          <p>Please <strong>press</strong> F12 to see my implementation in the Source section.</p>
+        </li>
+      </ol>
+    </div>
   </div>
 
   <script src="main.js"></script>
