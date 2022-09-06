@@ -1,9 +1,11 @@
-import './App.css';
+import Counter from './components/Counter';
+import TdList from './components/TdList';
 
 function App() {
   return (
     <div className="App">
-      hi
+      <Counter />
+      <TdList />
     </div>
   );
 }
