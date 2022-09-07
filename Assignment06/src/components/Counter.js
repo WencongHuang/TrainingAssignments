@@ -22,6 +22,7 @@ class Counter extends React.Component{
     // if(this.state.count % 2 === 1) {
     //   this.increment();
     // }
+    // Same As:
     this.state.count % 2 === 1 && this.increment();
   }
 
