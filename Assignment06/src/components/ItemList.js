@@ -8,9 +8,9 @@ function Item(props) {
 }
 
 function ItemList(props) {
-  let {toDo, removeItem} = props;
+  let {toDo} = props;
 
-  removeItem = (event) => {
+  const removeItem = (event) => {
     // event.target points to the Delete button of each Item.
     // So we just need to remove the whole <li> element.
     event.target.parentNode.remove();
