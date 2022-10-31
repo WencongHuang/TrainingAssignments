@@ -45,6 +45,10 @@ class Counter extends React.Component{
     }
   }
 
+  componentWillUnmount() {
+    clearInterval(this.state.timer);
+  }
+
   render () {
     return (
       <div className="Counter">
